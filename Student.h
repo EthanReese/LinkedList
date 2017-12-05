@@ -4,8 +4,11 @@
 
 class Student{
      public:
-          Student();
+          Student(char*);
           ~Student();
+          void printName();
+          char* getName();
      private:
-
-}
+          char* name;
+};
+#endif

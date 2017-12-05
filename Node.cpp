@@ -1,4 +1,6 @@
 #include "Node.h"
+#include "Student.h"
+#include <cstring>
 #include <cstdlib>
 
 //Construct the student based on the pointer's input.
@@ -10,12 +12,11 @@ Node::Node(Student* newStudent){
 //Delete the elements of the node
 Node::~Node(){
      delete student;
-     next = NULL;
 }
 
 //Set the next element of the linked list.
 void Node::setNext(Node* newNode){
-     next = newNext;
+     next = newNode;
 }
 //Get the student that is at this point on the lsit.
 Student* Node::getStudent(){
