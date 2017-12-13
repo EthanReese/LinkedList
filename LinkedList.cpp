@@ -11,8 +11,8 @@
 
 using namespace std;
 
-void add(Student* newStudent, Node* head);
-void print(Node*);
+void add(Student* newStudent, Node* &head);
+void print(Node* next);
 void deleteStudent(char* studentName, Node* head);
 void toLowerCase(char (&arr)[80]);
 
@@ -36,7 +36,6 @@ int main(){
                Student* student = new Student(nameInputNew);
                delete [] nameInputNew;
                add(student, head);
-               head->getStudent()->printName();
           }
           //If they want to delete a character
           else if(strcmp(input, "delete") == 0){
@@ -65,11 +64,12 @@ void toLowerCase(char (&arr)[80]){
      }
 }
 //Function that can add a node to the linked list
-void add(Student* newStudent, Node* head){
+void add(Student* newStudent, Node* &head){
      Node* current = head;
      //If its the first node in the chain then it can just be created in isolation
      if(current == NULL){
           head = new Node(newStudent);
+          cout << head->getStudent();
      }
      //Otherwise it needs to go through the whole chain and figure it out
      else{

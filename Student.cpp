@@ -9,7 +9,7 @@ using namespace std;
 
 Student::Student(char* newName){
      //Assign all of the nessecary variables here
-     char* name = new char[80];
+     name = new char[80];
      strcpy(name, newName);
 }
 
