@@ -69,7 +69,6 @@ void add(Student* newStudent, Node* &head){
      //If its the first node in the chain then it can just be created in isolation
      if(current == NULL){
           head = new Node(newStudent);
-          cout << head->getStudent();
      }
      //Otherwise it needs to go through the whole chain and figure it out
      else{
